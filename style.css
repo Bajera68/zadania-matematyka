@@ -413,6 +413,13 @@ body {
     grid-template-columns: 1fr;
   }
 }
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* odstęp między przyciskami i napisem */
+  margin-top: 1.5rem;
+}
 
 .pagination {
   display: flex;
