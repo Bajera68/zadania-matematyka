@@ -1,63 +1,48 @@
 {
-    "Funkcja kwadratowaaaaaaaaaaaaaaaaaa": [
-        {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-        {
-            "task": "2",
-            "description": "Rozwiąż równanie kwadratowe \\(-0.5x^2-5x+3=0\\)",
-            "answer": "Odpowiedź: lim_{x->c} f(x) = f(c)"
-        },
-         {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-         {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        }
-    ],
-    "Rozdział 2": [
-        {
-            "task": "2.1",
-            "description": "Rozwiąż nierówność \\( |x| < 5 \\).",
-            "answer": "Odpowiedź: -5 < x < 5"
-        }
-    ],
-     "Rozdział 3": [
-        {
-            "task": "2.1",
-            "description": "Rozwiąż nierówność \\( |x| < 5 \\).",
-            "answer": "Odpowiedź: -5 < x < 5"
-        }
-    ]
+  "Funkcja kwadratowa": [
+    {
+      "task": "1",
+      "description": "Rozwiąż równanie kwadratowe \\(6x^2 + 3x + 1 = 0\\).",
+      "answer": "Odpowiedź: \\(x = \\frac{-3 \\pm \\sqrt{3^2 - 4 \\cdot 6 \\cdot 1}}{2 \\cdot 6} = \\frac{-3 \\pm \\sqrt{9 - 24}}{12} = \\frac{-3 \\pm \\sqrt{-15}}{12}\\) — brak rozwiązań rzeczywistych."
+    },
+    {
+      "task": "2",
+      "description": "Rozwiąż równanie kwadratowe \\(-0.5x^2 - 5x + 3 = 0\\).",
+      "answer": "Odpowiedź: \\(x = \\frac{5 \\pm \\sqrt{(-5)^2 - 4 \\cdot (-0.5) \\cdot 3}}{2 \\cdot (-0.5)} = \\frac{5 \\pm \\sqrt{25 + 6}}{-1} = \\frac{5 \\pm \\sqrt{31}}{-1}\\)"
+    },
+    {
+      "task": "3",
+      "description": "Rozwiąż równanie kwadratowe \\(x^2 - 4x + 4 = 0\\).",
+      "answer": "Odpowiedź: \\(x = \\frac{4 \\pm \\sqrt{(-4)^2 - 4 \\cdot 1 \\cdot 4}}{2 \\cdot 1} = \\frac{4 \\pm 0}{2} = 2\\)."
+    },
+    {
+      "task": "4",
+      "description": "Rozwiąż równanie kwadratowe \\(2x^2 - 7x + 3 = 0\\).",
+      "answer": "Odpowiedź: \\(x = \\frac{7 \\pm \\sqrt{49 - 24}}{4} = \\frac{7 \\pm 5}{4}\\), czyli \\(x_1 = 3\\), \\(x_2 = \\frac{1}{2}\\)."
+    }
+  ],
+  "Rozdział 2": [
+    {
+      "task": "2.1",
+      "description": "Rozwiąż nierówność \\(|x| < 5\\).",
+      "answer": "Odpowiedź: \\(-5 < x < 5\\)."
+    },
+    {
+      "task": "2.2",
+      "description": "Rozwiąż nierówność \\(x^2 - 9 > 0\\).",
+      "answer": "Odpowiedź: \\(x < -3 \\; \\text{lub} \\; x > 3\\)."
+    }
+  ],
+  "Rozdział 3": [
+    {
+      "task": "3.1",
+      "description": "Rozwiąż nierówność \\(|x - 2| \leq 4\\).",
+      "answer": "Odpowiedź: \\(-2 \leq x \leq 6\\)."
+    },
+    {
+      "task": "3.2",
+      "description": "Rozwiąż nierówność \\(x^2 + 4x + 4 \geq 0\\).",
+      "answer": "Odpowiedź: \\(x \in \\mathbb{R}\\), ponieważ \\(x^2 + 4x + 4 = (x + 2)^2 \geq 0\\) dla każdego \\(x\\)."
+    }
+  ]
 }
-
-
-
-
-
