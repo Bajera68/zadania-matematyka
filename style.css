@@ -122,45 +122,68 @@ body {
 }
 
 /* MENU SLIDER */
-
 .menu-slider {
   position: fixed;
   top: 0; left: -280px;
   width: 280px;
   height: 100vh;
-  background-color: #222;
+  background-color: rgba(76, 175, 80, 0.4); /* Zwiększona przezroczystość (0.6) */
   color: #eee;
-  box-shadow: 2px 0 12px rgba(0,0,0,0.4);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
   transition: left 0.3s ease;
   z-index: 15000;
   padding: 2rem 1.5rem;
   overflow-y: auto;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+  backdrop-filter: blur(8px); /* Efekt rozmycia tła */
 }
 
 .menu-slider.open {
   left: 0;
 }
 
+/* Nawigacja w sliderze */
+.menu-slider__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Większa przestrzeń między linkami */
+}
+
 .menu-slider__nav a {
   display: block;
-  padding: 0.8rem 0;
+  padding: 0.8rem 1.5rem; /* Większe paddingi, lepszy komfort kliknięcia */
   color: #eee;
   font-weight: 600;
+  font-size: 1.1rem;
   text-decoration: none;
-  border-bottom: 1px solid #444;
-  transition: background-color 0.25s ease;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efekty interakcji */
   user-select: none;
 }
 
 .menu-slider__nav a:hover,
 .menu-slider__nav a:focus {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary); /* Kolor główny zielony */
   color: white;
+  transform: translateX(5px); /* Subtelna animacja przesunięcia w prawo */
   outline: none;
-  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Cień przy najechaniu */
 }
+
+/* Dodanie efektu dla otwartego menu */
+.menu-slider.open .menu-slider__nav a {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-slider.open .menu-slider__nav a:nth-child(even) {
+  transition-delay: 0.1s; /* Opóźnienie animacji dla naprzemiennych elementów */
+}
+
+.menu-slider.open .menu-slider__nav a:nth-child(odd) {
+  transition-delay: 0.2s;
+}
+
 
 /* OVERLAY */
 
@@ -420,5 +443,4 @@ body {
   color: var(--color-primary-dark);
   font-size: 1rem;
 }
-
 
