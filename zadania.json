@@ -3,7 +3,7 @@
         {
             "task": "1",
             "description": "Rozwiąż nierówność \\( x(2x-1)<2x \\).",
-            "answer": "Odpowiedź: $$( x \in \langle 0, \frac{3}{2}$$"
+            "answer": "Odpowiedź: $\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$"
         },
         {
             "task": "2",
