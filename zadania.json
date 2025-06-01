@@ -1,26 +1,63 @@
 {
-  "Funkcja kwadratowa": [
-    {
-      "task": 1,
-      "description": "Wyznacz deltę funkcji \\( f(x) = x^2 + 2x + 1 \\).",
-      "answer": "Delta = 0, więc funkcja ma jedno miejsce zerowe: \\( x = -1 \\)"
-    },
-    {
-      "task": 2,
-      "description": "Podaj współrzędne wierzchołka funkcji \\( f(x) = 2x^2 - 4x + 3 \\).",
-      "answer": "Wierzchołek: \\( x = 1, y = 1 \\)"
-    },
-      {
-      "task": 1,
-      "description": "Wyznacz deltę funkcji \\( f(x) = x^2 + 2x + 1 \\).",
-      "answer": "Delta = 0, więc funkcja ma jedno miejsce zerowe: \\( x = -1 \\)"
-    }
-  ],
-  "Rozdział 2": [
-    {
-      "task": 1,
-      "description": "Zadanie z innego działu",
-      "answer": "Odpowiedź"
-    }
-  ]
+    "Funkcja kwadratowa": [
+        {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        },
+        {
+            "task": "2",
+            "description": "Rozwiąż równanie kwadratowe \\(-0.5x^2-5x+3=0\\)",
+            "answer": "Odpowiedź: lim_{x->c} f(x) = f(c)"
+        },
+         {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        },
+         {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        },
+                 {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        },
+                 {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        },
+                 {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        },
+                 {
+            "task": "1",
+            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
+            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+        }
+    ],
+    "Rozdział 2": [
+        {
+            "task": "2.1",
+            "description": "Rozwiąż nierówność \\( |x| < 5 \\).",
+            "answer": "Odpowiedź: -5 < x < 5"
+        }
+    ],
+     "Rozdział 3": [
+        {
+            "task": "2.1",
+            "description": "Rozwiąż nierówność \\( |x| < 5 \\).",
+            "answer": "Odpowiedź: -5 < x < 5"
+        }
+    ]
 }
+
+
+
+
+
