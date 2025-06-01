@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matematyka - Nauka przez zadania</title>
+  <meta name="description" content="Strona do nauki matematyki przez zadania z rozwiązaniami. Równania, nierówności, granice i więcej." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo" aria-label="Logo Matematyka">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#4caf50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/></svg>
+      </div>
+      <h1 class="header__title">Matematyka - Nauka przez zadania</h1>
+      <nav class="header__nav">
+        <button id="menu-button" class="btn btn--primary" aria-expanded="false" aria-controls="menu-slider">
+          Wybierz rozdział
+        </button>
+        <button id="home-button" class="btn btn--secondary">
+          Strona główna
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="menu-slider" class="menu-slider" aria-hidden="true" tabindex="-1" role="navigation" aria-label="Menu rozdziałów">
+    <nav id="menu" class="menu-slider__nav"></nav>
+  </div>
+
+  <div id="overlay" class="overlay hidden" tabindex="-1" aria-hidden="true"></div>
+
+  <main class="main-content container">
+    <section id="home-message" class="welcome-box" aria-live="polite" aria-atomic="true">
+      <strong>Liczba zadań dostępnych na stronie: <span id="task-count">0</span></strong>
+      <blockquote class="quote">
+        "Matematyka to język, w którym Bóg napisał wszechświat." – <cite>Galileusz</cite>
+      </blockquote>
+      <p class="author">Autor: Jan Kowalski</p>
+    </section>
+
+    <section id="tasks-container" class="tasks-grid" aria-live="polite" aria-atomic="true"></section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>© <span id="year"></span> Matematyka - Nauka przez zadania. Wszystkie prawa zastrzeżone.</p>
+      <p><a href="mailto:kontakt@matematyka.pl" class="footer__link">Kontakt</a> | <a href="#" class="footer__link">O autorze</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Skrypt do chowania nagłówka przy scrollowaniu w dół i pokazywania przy scrollowaniu w górę
+    let lastScrollY = window.scrollY;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        header.classList.add('header--hidden');
+      } else {
+        header.classList.remove('header--hidden');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+</body>
+</html>
+
+
+
