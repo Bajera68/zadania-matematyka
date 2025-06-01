@@ -1,63 +1,45 @@
 {
-    "Funkcja kwadratowa": [
-        {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-        {
-            "task": "2",
-            "description": "Rozwiąż równanie kwadratowe \\(-0.5x^2-5x+3=0\\)",
-            "answer": "Odpowiedź: lim_{x->c} f(x) = f(c)"
-        },
-         {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-         {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        },
-                 {
-            "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
-        }
-    ],
-    "Rozdział 2": [
-        {
-            "task": "2.1",
-            "description": "Rozwiąż nierówność \\( |x| < 5 \\).",
-            "answer": "Odpowiedź: -5 < x < 5"
-        }
-    ],
-     "Rozdział 3": [
-        {
-            "task": "2.1",
-            "description": "Rozwiąż nierówność \\( |x| < 5 \\).",
-            "answer": "Odpowiedź: -5 < x < 5"
-        }
-    ]
+  "Nierówności kwadratowe": [
+    {
+      "task": "1",
+      "description": "Rozwiąż nierówność: \\( x(2x-1)<2x \\).",
+      "answer": "Odpowiedź: \\(x \\in (0,\\frac{3}{2}) \\)"
+    },
+    {
+      "task": "2",
+      "description": "Rozwiąż nierówność: \\( 2(x+1)(x-3) < x^2-9 \\).",
+      "answer": "Odpowiedź: \\(x \\in (1,3) \\)"
+    },
+    
+     {
+      "task": "3",
+      "description": "Rozwiąż nierówność: \\( 2(x-1)(x+3) > x-1 \\).",
+      "answer": "Odpowiedź: \\(x \\in (-\\infty,-\\frac{5}{2})\\cup (1,\\infty) \\)"
+    },
+    
+     {
+      "task": "4",
+      "description": "Rozwiąż nierówność: \\( -3x^2+8 \\geq 10x \\).",
+      "answer": "Odpowiedź: \\(x \\in \\langle -4,\\frac{3}{2} \\rangle \\)"
+    },
+    
+     {
+      "task": "5",
+      "description": "Rozwiąż nierówność: \\( (x-1)^2 \\leq \\frac{3}{2} \\).",
+      "answer": "Odpowiedź: \\( x \\in \\langle -\\frac{\\sqrt{6}}{2}+1,\\frac{\\sqrt{6}}{2}+1 \\rangle \\)"
+    },
+    
+    {
+      "task": "6",
+      "description": "Rozwiąż nierówność: \\( 2x^2+x-6 \\leq 0 \\).",
+      "answer": "Odpowiedź: \\( x \\in (-2,\\frac{3}{2}) \\)"
+    }
+  ],
+  "Rozdział 2": [
+    {
+      "task": "2.1",
+      "description": "Rozwiąż nierówność \\(|x| < 5\\).",
+      "answer": "Odpowiedź: -5 < x < 5"
+    }
+  ]
 }
-
-
-
-
-
