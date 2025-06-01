@@ -127,7 +127,7 @@ body {
   top: 0; left: -280px;
   width: 280px;
   height: 100vh;
-  background-color: rgba(76, 175, 80, 0.4); /* Zwiększona przezroczystość (0.6) */
+  background-color: rgba(76, 175, 80, 0.4); /* Zwiększona przezroczystość (0.4) */
   color: #eee;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
   transition: left 0.3s ease;
@@ -184,6 +184,35 @@ body {
   transition-delay: 0.2s;
 }
 
+/* RESPONSYWNOŚĆ - Dostosowanie do ekranów mobilnych */
+@media (max-width: 768px) {
+  .menu-slider {
+    width: 240px; /* Mniejsza szerokość dla mobilnych ekranów */
+    left: -240px; /* Pozycja początkowa */
+  }
+
+  .menu-slider__nav a {
+    font-size: 1rem; /* Mniejsza czcionka w sliderze na mobilnych */
+    padding: 0.7rem 1.3rem; /* Zmniejszone paddingi dla lepszej przestronności */
+  }
+}
+
+/* Responsywność - Dostosowanie slidera do urządzeń poniżej 600px (telefonów) */
+@media (max-width: 600px) {
+  .menu-slider {
+    width: 200px; /* Jeszcze mniejsza szerokość dla małych telefonów */
+    left: -200px; /* Pozycja początkowa */
+  }
+
+  .menu-slider__nav {
+    gap: 1rem; /* Mniejsza przestrzeń między linkami */
+  }
+
+  .menu-slider__nav a {
+    font-size: 0.95rem; /* Jeszcze mniejsza czcionka na małych ekranach */
+    padding: 0.6rem 1.2rem; /* Dostosowanie paddingu dla mniejszych przycisków */
+  }
+}
 
 /* OVERLAY */
 
@@ -393,54 +422,10 @@ body {
 }
 
 .pagination .page-info {
-  font-weight: 600;
-  color: var(--color-primary-dark);
+  font-size: 1.1rem;
 }
 
-.page-numbers {
+.pagination .page-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
+  gap: 1rem;
 }
-
-.btn--number {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  background-color: white;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn--number:hover,
-.btn--number:focus {
-  background-color: var(--color-primary-light);
-}
-
-.btn--number.active {
-  background-color: var(--color-primary);
-  color: white;
-  pointer-events: none;
-}
-
-.pagination {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-}
-
-.pagination-container {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.page-info {
-  font-weight: 600;
-  color: var(--color-primary-dark);
-  font-size: 1rem;
-}
-
