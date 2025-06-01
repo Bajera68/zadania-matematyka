@@ -3,7 +3,7 @@
         {
             "task": "1",
             "description": "Rozwiąż nierówność \\( x(2x-1)<2x \\).",
-            "answer": "Odpowiedź: $$( x in langle 0, \frac{3}{2}$$"
+            "answer": "Odpowiedź: $$( x \in \langle 0, \frac{3}{2}$$"
         },
         {
             "task": "2",
