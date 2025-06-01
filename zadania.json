@@ -2,7 +2,7 @@
     "Nierówności kwadratowe": [
         {
             "task": "1",
-            "description": "Rozwiąż nierówność \\( x(2x-1)<2x \\).",
+            "description": "Rozwiąż nierówność \\( ex(2x-1)<2x \\).",
             "answer": "Odpowiedź: lim_{x->c} f(x) = f(c)"
         },
         {
