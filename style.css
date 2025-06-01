@@ -200,17 +200,18 @@ body {
 /* Responsywność - Dostosowanie slidera do urządzeń poniżej 600px (telefonów) */
 @media (max-width: 600px) {
   .menu-slider {
-    width: 200px; /* Jeszcze mniejsza szerokość dla małych telefonów */
-    left: -200px; /* Pozycja początkowa */
+    width: 280px; /* Ta sama szerokość jak na większych ekranach */
+    left: -280px; /* Pozycja początkowa */
+    background-color: rgba(76, 175, 80, 0.4); /* Zachowanie zielonego tła z przezroczystością */
   }
 
   .menu-slider__nav {
-    gap: 1rem; /* Mniejsza przestrzeń między linkami */
+    gap: 1.5rem; /* Większa przestrzeń między linkami */
   }
 
   .menu-slider__nav a {
-    font-size: 0.95rem; /* Jeszcze mniejsza czcionka na małych ekranach */
-    padding: 0.6rem 1.2rem; /* Dostosowanie paddingu dla mniejszych przycisków */
+    font-size: 1.1rem; /* Ta sama wielkość czcionki */
+    padding: 0.8rem 1.5rem; /* Utrzymanie takich samych paddingów */
   }
 }
 
