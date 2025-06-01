@@ -213,6 +213,21 @@ body {
     font-size: 1.1rem; /* Ta sama wielkość czcionki */
     padding: 0.8rem 1.5rem; /* Utrzymanie takich samych paddingów */
   }
+
+  .pagination .page-buttons {
+    flex-wrap: wrap; /* Pozwól przyciskom łamać się na nową linię */
+    justify-content: center; /* Wyśrodkuj przyciski */
+    gap: 0.5rem; /* Mniejszy odstęp */
+  }
+
+  .pagination .page-buttons button {
+    flex: 1 1 40%; /* Przyciski zajmą mniej miejsca i będą elastyczne */
+    min-width: 100px; /* Minimalna szerokość dla czytelności */
+    font-size: 0.9rem; /* Mniejszy font dla telefonu */
+    padding: 0.5rem 1rem; /* Mniejsze pady */
+  }
+
+  
 }
 
 /* OVERLAY */
