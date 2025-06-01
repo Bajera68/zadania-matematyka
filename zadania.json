@@ -1,9 +1,9 @@
 {
-    "Funkcja kwadratowa": [
+    "Nierówności kwadratowe": [
         {
             "task": "1",
-            "description": "Rozwiąż równanie kwadratowe \\( 6x^2 + 3x + 1 = 0 \\).",
-            "answer": "Odpowiedź: \\(x = (-b ± √(b² - 4ac)) / 2a\\)"
+            "description": "Rozwiąż nierówność \\( x(2x-1)<2x \\).",
+            "answer": "Odpowiedź: \\( x \in \langle 0, \frac{3}{2}\\)"
         },
         {
             "task": "2",
