@@ -1,8 +1,9 @@
-let currentPage = 1;
-const tasksPerPage = 5;
-let currentChapter = '';
-
 document.addEventListener('DOMContentLoaded', () => {
+  let currentPage = 1;
+  const tasksPerPage = 5;
+  let currentChapter = '';
+  let chapters = {};
+
   const menuButton = document.getElementById('menu-button');
   const homeButton = document.getElementById('home-button');
   const menuSlider = document.getElementById('menu-slider');
@@ -13,10 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const taskCountSpan = document.getElementById('task-count');
   const yearSpan = document.getElementById('year');
 
-  let chapters = {};
-
   yearSpan.textContent = new Date().getFullYear();
 
+  // Ładowanie zadań z pliku JSON
   fetch('https://raw.githubusercontent.com/Bajera68/zadania-matematyka/refs/heads/main/zadania.json')
     .then(res => res.json())
     .then(data => {
@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuSlider.setAttribute('aria-hidden', 'true');
   }
 
+  // Obsługa menu mobilnego
   menuButton.addEventListener('click', () => {
     if (menuSlider.classList.contains('open')) {
       closeMenu();
@@ -182,4 +183,27 @@ document.addEventListener('DOMContentLoaded', () => {
     homeMessage.style.display = 'block';
     closeMenu();
   });
+
+  // Obsługa podstron typu "O autorze", "Kurs"
+  document.querySelectorAll('[data-static-page]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const page = link.dataset.staticPage;
+      loadStaticPage(page);
+      closeMenu();
+    });
+  });
+
+  function loadStaticPage(page) {
+    fetch(`${page}.html`)
+      .then(res => res.text())
+      .then(html => {
+        tasksContainer.innerHTML = html;
+        homeMessage.style.display = 'none';
+        renderMathJax(); // na wypadek gdyby statyczna strona zawierała wzory
+      })
+      .catch(() => {
+        tasksContainer.innerHTML = `<p>Nie udało się załadować strony: ${page}</p>`;
+      });
+  }
 });
