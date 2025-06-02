@@ -15,9 +15,7 @@ html, body {
   --font-family: 'Inter', sans-serif;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -27,8 +25,6 @@ body {
   background-color: var(--color-gray-light);
   color: var(--color-gray-dark);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -41,7 +37,6 @@ body {
 }
 
 /* HEADER */
-
 .header {
   background: white;
   border-bottom: 1px solid #ddd;
@@ -50,7 +45,6 @@ body {
   top: 0;
   z-index: 10000;
   transition: transform 0.3s ease;
-  will-change: transform;
 }
 
 .header--hidden {
@@ -83,7 +77,6 @@ body {
 }
 
 /* BUTTONS */
-
 .btn {
   font-family: var(--font-family);
   font-weight: 600;
@@ -127,7 +120,7 @@ body {
   top: 0; left: -280px;
   width: 280px;
   height: 100vh;
-  background-color: rgba(76, 175, 80, 0.4); /* Zwiększona przezroczystość (0.4) */
+  background-color: rgba(76, 175, 80, 0.4);
   color: #eee;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
   transition: left 0.3s ease;
@@ -136,102 +129,90 @@ body {
   overflow-y: auto;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  backdrop-filter: blur(8px); /* Efekt rozmycia tła */
+  backdrop-filter: blur(8px);
 }
 
 .menu-slider.open {
   left: 0;
 }
 
-/* Nawigacja w sliderze */
 .menu-slider__nav {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Większa przestrzeń między linkami */
+  gap: 1.5rem;
 }
 
 .menu-slider__nav a {
   display: block;
-  padding: 0.8rem 1.5rem; /* Większe paddingi, lepszy komfort kliknięcia */
+  padding: 0.8rem 1.5rem;
   color: #eee;
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Efekty interakcji */
+  transition: background-color 0.3s ease, transform 0.3s ease;
   user-select: none;
 }
 
 .menu-slider__nav a:hover,
 .menu-slider__nav a:focus {
-  background-color: var(--color-primary); /* Kolor główny zielony */
+  background-color: var(--color-primary);
   color: white;
-  transform: translateX(5px); /* Subtelna animacja przesunięcia w prawo */
-  outline: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Cień przy najechaniu */
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Dodanie efektu dla otwartego menu */
-.menu-slider.open .menu-slider__nav a {
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.menu-slider.open .menu-slider__nav a:nth-child(even) {
-  transition-delay: 0.1s; /* Opóźnienie animacji dla naprzemiennych elementów */
-}
-
-.menu-slider.open .menu-slider__nav a:nth-child(odd) {
-  transition-delay: 0.2s;
-}
-
-/* RESPONSYWNOŚĆ - Dostosowanie do ekranów mobilnych */
+/* RESPONSYWNOŚĆ */
 @media (max-width: 768px) {
   .menu-slider {
-    width: 240px; /* Mniejsza szerokość dla mobilnych ekranów */
-    left: -240px; /* Pozycja początkowa */
+    width: 240px;
+    left: -240px;
   }
 
   .menu-slider__nav a {
-    font-size: 1rem; /* Mniejsza czcionka w sliderze na mobilnych */
-    padding: 0.7rem 1.3rem; /* Zmniejszone paddingi dla lepszej przestronności */
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
   }
 }
 
-/* Responsywność - Dostosowanie slidera do urządzeń poniżej 600px (telefonów) */
 @media (max-width: 600px) {
-  .menu-slider {
-    width: 280px; /* Ta sama szerokość jak na większych ekranach */
-    left: -280px; /* Pozycja początkowa */
-    background-color: rgba(76, 175, 80, 0.4); /* Zachowanie zielonego tła z przezroczystością */
+  .header__container {
+    flex-wrap: wrap;
   }
 
-  .menu-slider__nav {
-    gap: 1.5rem; /* Większa przestrzeń między linkami */
+  .header__title {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .menu-slider {
+    width: 280px;
+    left: -280px;
   }
 
   .menu-slider__nav a {
-    font-size: 1.1rem; /* Ta sama wielkość czcionki */
-    padding: 0.8rem 1.5rem; /* Utrzymanie takich samych paddingów */
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
   }
 
   .pagination .page-buttons {
-    flex-wrap: wrap; /* Pozwól przyciskom łamać się na nową linię */
-    justify-content: center; /* Wyśrodkuj przyciski */
-    gap: 0.5rem; /* Mniejszy odstęp */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
   .pagination .page-buttons button {
-    flex: 1 1 40%; /* Przyciski zajmą mniej miejsca i będą elastyczne */
-    min-width: 100px; /* Minimalna szerokość dla czytelności */
-    font-size: 0.9rem; /* Mniejszy font dla telefonu */
-    padding: 0.5rem 1rem; /* Mniejsze pady */
+    flex: 1 1 40%;
+    min-width: 100px;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
-
-  
 }
 
 /* OVERLAY */
-
 .overlay {
   position: fixed;
   inset: 0;
@@ -248,14 +229,12 @@ body {
 }
 
 /* MAIN CONTENT */
-
 .main-content {
   padding-bottom: 4rem;
   flex-grow: 1;
 }
 
 /* WELCOME BOX */
-
 .welcome-box {
   background-color: var(--color-primary-light);
   border: 3px solid var(--color-primary);
@@ -284,16 +263,13 @@ body {
   font-size: 1rem;
 }
 
-/* AUTHOR */
-
 .author {
   font-weight: 600;
   color: var(--color-primary-dark);
   font-size: 1.1rem;
 }
 
-/* TASKS GRID */
-
+/* TASKS */
 .tasks-grid {
   display: block;
   margin-top: 20px;
@@ -302,8 +278,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* TASK CARD */
 
 .task {
   background: white;
@@ -328,18 +302,13 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--color-gray-dark);
-  user-select: text;
 }
 
 .task p {
-  flex-grow: 1;
   font-size: 1.1rem;
   color: var(--color-gray-medium);
   margin-bottom: 1.6rem;
-  user-select: text;
 }
-
-/* BUTTON "POKAŻ ODPOWIEDŹ" */
 
 .reveal-answer {
   background-color: var(--color-primary);
@@ -351,7 +320,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
   align-self: flex-start;
-  user-select: none;
   transition: background-color 0.3s ease;
 }
 
@@ -362,14 +330,11 @@ body {
   box-shadow: 0 4px 10px rgba(56,142,60,0.7);
 }
 
-/* ODPOWIEDŹ */
-
 .answer {
   margin-top: 1rem;
   font-size: 1.1rem;
   color: var(--color-primary-dark);
   display: none;
-  user-select: text;
 }
 
 .answer.show {
@@ -377,7 +342,6 @@ body {
 }
 
 /* FOOTER */
-
 .footer {
   background-color: white;
   border-top: 1px solid #ddd;
@@ -385,11 +349,7 @@ body {
   font-size: 0.9rem;
   color: var(--color-gray-medium);
   text-align: center;
-  user-select: none;
-  margin-top: 20px;
 }
-
-/* Linki w stopce */
 
 .footer__link {
   color: var(--color-primary);
@@ -405,34 +365,12 @@ body {
   outline: none;
 }
 
-/* RESPONSYWNOŚĆ */
-
-@media (max-width: 600px) {
-  .header__container {
-    flex-wrap: wrap;
-  }
-
-  .header__title {
-    margin-left: 0;
-    margin-top: 0.5rem;
-    font-size: 1.3rem;
-    flex-basis: 100%;
-    text-align: center;
-  }
-
-  .welcome-box {
-    padding: 1.5rem 1.5rem;
-  }
-
-  .tasks-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* PAGINATION */
 .pagination-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* odstęp między przyciskami i napisem */
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
@@ -451,4 +389,60 @@ body {
 .pagination .page-buttons {
   display: flex;
   gap: 1rem;
+}
+
+/* === AUTOR - WIZYTÓWKA === */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.profile-card__image-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin-bottom: 1.5rem;
+}
+
+.profile-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-card__name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  margin: 0;
+}
+
+.profile-card__role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-gray-medium);
+  margin: 0.3rem 0 1rem;
+}
+
+.profile-card__bio {
+  font-size: 1.1rem;
+  color: var(--color-gray-dark);
+  margin-bottom: 2rem;
+}
+
+.profile-card__contact .btn {
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
 }
